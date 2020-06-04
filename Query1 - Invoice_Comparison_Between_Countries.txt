@@ -1,0 +1,8 @@
+/* Query 1 - used for first insight */
+
+
+SELECT BillingCountry, COUNT (*) Invoices
+FROM Invoice
+GROUP BY BillingCountry
+ORDER BY Invoices DESC
+LIMIT 11;

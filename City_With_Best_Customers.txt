@@ -1,0 +1,7 @@
+/* Query 2 - used for second insight */
+
+SELECT customer.City, SUM(invoice.total)
+FROM customer, Invoice
+WHERE customer.CustomerId = Invoice.CustomerId
+GROUP BY customer.City
+ORDER BY SUM(Invoice.total) DESC

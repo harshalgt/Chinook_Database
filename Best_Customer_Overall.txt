@@ -1,0 +1,9 @@
+/* Query 3 - used for third insight */
+
+
+SELECT cus.CustomerId, cus.FirstName, cus.LastName, SUM(Inv.total) AS TotalAmountSpent
+FROM Customer cus, Invoice Inv
+WHERE cus.CustomerId = Inv.CustomerId
+GROUP BY (Inv.CustomerId)
+ORDER BY TotalAmountSpent DESC
+LIMIT 10;
